@@ -20,7 +20,17 @@ function primitiveMultiply(a, b) {
 }
 
 function reliableMultiply(a, b) {
-    // your code here
+    for ( ; ; ) {
+        try {
+            return primitiveMultiply(a, b);
+        } catch (e) {
+            if (e instanceof MultiplicatorUnitFailure) {
+                console.log("Multiplication unit failure keep trying");
+            } else {
+                throw e;
+            }
+        }
+    }
 }
 
 console.log(reliableMultiply(8, 8));
