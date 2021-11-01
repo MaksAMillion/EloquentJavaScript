@@ -1,4 +1,4 @@
-// It is a box with a lock. There si an array in the
+// It is a box with a lock. There is an array in the
 // box, but you can get at it only when the box is
 // unlocked. Directly accessing the private _content
 // property is forbidden.
@@ -22,7 +22,18 @@ const box = {
 };
 
 function withBoxUnlocked(body) {
-    // your code here.
+    try {
+        box.unlock();
+        // console.log(`Check status lock: ${ box.locked }, // has been unlocked`);
+        body();
+        // console.log("getContent function output", box.getContent());
+        box.lock();
+        // console.log(`Check status lock: ${ box.locked }, // has been locked`);    
+    } catch (e) {
+        // console.log("Error raised lock the box if unlocked");
+        box.lock();
+        // console.log(`Check status lock: ${ box.locked }, // has been locked`);
+    }
 }
 
 withBoxUnlocked(function() {
