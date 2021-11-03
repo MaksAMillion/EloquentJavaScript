@@ -22,17 +22,29 @@ const box = {
 };
 
 function withBoxUnlocked(body) {
+    let startingLockStatus= box.locked;
+    
+    box.unlock();
+    // console.log(`Check starting status lock: startingLockStatus,
+    // has been unlocked`);
+        
     try {
-        box.unlock();
-        // console.log(`Check status lock: ${ box.locked }, // has been unlocked`);
-        body();
-        // console.log("getContent function output", box.getContent());
-        box.lock();
-        // console.log(`Check status lock: ${ box.locked }, // has been locked`);    
+        body();    
     } catch (e) {
-        // console.log("Error raised lock the box if unlocked");
-        box.lock();
-        // console.log(`Check status lock: ${ box.locked }, // has been locked`);
+        // divert error - console.log shows the error from
+        // anonymous function - line 56
+        // Error("Pirates on the horizon! Abort!")
+        // console.log("Error raised: ", e);
+        // do nothing
+    }
+    finally {
+        // locks only when the box started out locked
+        // extra points - exercise
+        if (startingLockStatus) {
+            box.lock();
+            // console.log(`Check status lock: ${ box.locked },
+            // has been locked`);
+        }
     }
 }
 
