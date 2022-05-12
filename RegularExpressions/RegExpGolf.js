@@ -28,7 +28,7 @@ verify(/ca[rt]/,
        ["my car", "bad cats"],
        ["camper", "high art"]);
 
-verify(/(pop)|(prop)/,
+verify(/pr?op/,
        ["pop culture", "mad props"],
        ["plop", "prrrop"]);
 
