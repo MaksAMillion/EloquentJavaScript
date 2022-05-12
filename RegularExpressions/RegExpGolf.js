@@ -32,7 +32,7 @@ verify(/pr?op/,
        ["pop culture", "mad props"],
        ["plop", "prrrop"]);
 
-verify(/.../,
+verify(/ferr((et)|(y)|(ari))/,
        ["ferret", "ferry", "ferrari"],
        ["ferrum", "transfer A"]);
 
