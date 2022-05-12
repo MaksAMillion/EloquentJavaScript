@@ -6,19 +6,19 @@
     mentioned. When your expression works, see whether you can make it 
     any smaller.
 
-    car and cat
+    1. car and cat
 
-    pop and prop
+    2. pop and prop
 
-    ferret, ferry, and ferrari
+    3. ferret, ferry, and ferrari
 
-    Any word ending in ious
+    4. Any word ending in ious
 
-    A whitespace character followed by a period, comma, colon, or semicolon
+    5. A whitespace character followed by a period, comma, colon, or semicolon
 
-    A word longer than six letters
+    6. A word longer than six letters
 
-    A word without the letter e (or E)
+    7. A word without the letter e (or E)
 
 */
 
