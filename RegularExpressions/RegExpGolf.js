@@ -24,7 +24,7 @@
 
 // Fill in the regular expressions
 
-verify(/.../,
+verify(/(cat)|(car)/,
        ["my car", "bad cats"],
        ["camper", "high art"]);
 
@@ -56,6 +56,7 @@ verify(/.../,
 function verify(regexp, yes, no) {
   // Ignore unfinished exercises
   if (regexp.source == "...") return;
+
   for (let str of yes) if (!regexp.test(str)) {
     console.log(`Failure to match '${str}'`);
   }
