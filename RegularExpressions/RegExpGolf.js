@@ -28,7 +28,7 @@ verify(/(cat)|(car)/,
        ["my car", "bad cats"],
        ["camper", "high art"]);
 
-verify(/.../,
+verify(/(pop)|(prop)/,
        ["pop culture", "mad props"],
        ["plop", "prrrop"]);
 
