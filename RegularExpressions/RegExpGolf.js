@@ -24,7 +24,7 @@
 
 // Fill in the regular expressions
 
-verify(/(cat)|(car)/,
+verify(/ca[rt]/,
        ["my car", "bad cats"],
        ["camper", "high art"]);
 
