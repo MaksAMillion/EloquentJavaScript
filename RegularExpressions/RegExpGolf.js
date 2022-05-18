@@ -40,7 +40,7 @@ verify(/\w+(ious)\b/,
        ["how delicious", "spacious room"],
        ["ruinous", "consciousness"]);
 
-verify(/.../,
+verify(/\s[.,:;]/,
        ["bad punctuation ."],
        ["escape the period"]);
 
