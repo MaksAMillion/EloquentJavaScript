@@ -44,7 +44,7 @@ verify(/\s[.,:;]/,
        ["bad punctuation ."],
        ["escape the period"]);
 
-verify(/.../,
+verify(/(\w\w\w\w\w)(\w)+/,
        ["Siebentausenddreihundertzweiundzwanzig"],
        ["no", "three small words"]);
 
