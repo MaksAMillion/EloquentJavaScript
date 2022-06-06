@@ -10,7 +10,7 @@
 // lone dot isn't.
 
 // FIll in this regular expression
-let number = /^...$/;
+let number = /^[+-]?\d*((\d[.])|[.]\d)?\d*(e[+-]?|E[+-]?)?\d*$/;
 
 // Tests:
 for (let str of ["1", "-1", "+15", "1.55", ".5", "5.",
